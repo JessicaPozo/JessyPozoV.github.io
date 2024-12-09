@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Yuji+Mai&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Yuji Mai", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.encabezado{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(48, 46, 46);
+    color: rgb(175, 78, 199);
+}
+
+.encabezado h1{
+    padding-left: 10px ;
+    padding-right: 10px;
+    position: absolute;
+    background-color: rgb(48, 46, 46);
+    opacity: .9;
+}
+.encabezado img{
+    width: 250px;
+    height: 250px;
+    margin: 0 15px;
+    padding: 20px;
+    border-radius: 40px;
+    box-shadow: 10px 10px 10px 10px #555;
+    
+}
+
+.menu{
+    display: flex;
+    justify-content: left;
+    padding-left: 4rem;
+}
+.menu>a{
+    text-decoration: none;
+    padding: 1.5rem;
+    
+}
+.menu>a:hover{
+    text-shadow: 0px 10px 9px rgb(221, 114, 216);
+}
+
+.infor, section, main{
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+article p {
+    margin-bottom: 1rem;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+#proyectos {
+    padding: 2rem;
+    background: linear-gradient(to right, #c612f3, #fa7bfe);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+#proyectos:hover {
+    transform: scale(1.05);
+}
+#proyectos a{
+    text-decoration: none;
+    padding-left: 260px;
+    padding-bottom: 10px;
+    color: #000000;
+    display: inline-block;
+    position: relative;
+    transition: color 0.3s, transform 0.3s;
+}
+#proyectos:hover {
+    transform: scale(1.05);
+}
+#proyectos a::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -2px;
+    left: 130px; 
+    background-color: #f3e144;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+    
+}
+#proyectos a:hover::after{
+    visibility: visible;
+    transform: scaleX(1);
+}
+#proyectos a:hover{
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+#proyectos h3 {
+    color: #fff;
+}
+
+#proyectos h4 {
+    color: #ffe0b2;
+}
+
+main ol {
+    padding-left: 1.5rem;
+    list-style: none;
+    color: #fff;
+}
+
+main ol li {
+    margin-bottom: 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding-bottom: 1rem;
+}
+
+p {
+    color: #000000;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+#proyectosul {
+    padding-left: 1.5rem;
+    list-style: disc;
+    color: #000000;
+}
+
+.infor{
+    text-align: center;
+}
+.infor>ul{
+    list-style-type: none;
+    padding: 15px;
+}
+
+
+
+.pie{
+    display: flex;
+    justify-content: center;
+    background-color: #555;
+    max-height: 150px;
+    padding: 10px;
+    text-align: center;
+    
+}
+.pie>h2{
+    position: absolute;
+    padding-left: 10px ;
+    padding-right: 10px;
+    padding-bottom: 15px;
+}
+.pie img{
+    margin: 20px 15px;
+    padding: 20px;
+    border-radius: 40px;
+    box-shadow: 10px 10px 10px 10px #555;
+}
+
+@media (max-width: 768px) {
+    .encabezado {
+        flex-direction: column;
+    }
+
+    .encabezado h1 {
+        padding-left: 20px;
+        padding-right: 20px;
+        position: static;
+        margin-top: 10px;
+    }
+
+    .encabezado img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        padding-left: 0;
+    }
+
+    .menu > a {
+        padding: 1rem;
+    }
+
+    .infor, section, main {
+        padding: 0.5rem;
+    }
+
+    #proyectos a {
+        padding-left: 130px;
+        padding-bottom: 5px;
+    }
+
+    .pie {
+        flex-direction: column;
+        margin-top: 150px;
+    }
+
+    .pie img {
+        width: 40px;
+        height: 40px;
+        margin: 5px;
+        padding: 5px;
+        border-radius: 15px;
+        box-shadow: 5px 5px 5px 5px #555;
+    }
+}
+
+@media (max-width: 480px) {
+    .encabezado {
+        flex-direction: column;
+    }
+
+    .encabezado h1 {
+        padding-left: 15px;
+        padding-right: 15px;
+        position: static;
+        margin-top: 10px;
+    }
+
+    .encabezado img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        padding-left: 0;
+    }
+
+    .menu > a {
+        padding: 0.75rem;
+    }
+
+    .infor, section, main {
+        padding: 0.25rem;
+    }
+
+    #proyectos a {
+        padding-left: 65px;
+        padding-bottom: 2.5px;
+    }
+
+    .pie {
+        flex-direction: column;
+        margin-top: 100px;
+    }
+
+    .pie img {
+        width: 30px;
+        height: 30px;
+        margin: 3px;
+        padding: 3px;
+        border-radius: 10px;
+        box-shadow: 3px 3px 3px 3px #555;
+    }
+}
